@@ -1,14 +1,16 @@
-
+let api_key = config.RAPID_DAD_JOKE_API_KEY;
+let api_link = config.RAPID_DAD_JOKE_API;
+let api_host = config.RAPID_HOST;
 
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '1da92de020msh88608772bd7f708p16ff04jsnc92b20273f45',
-		'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+		'X-RapidAPI-Key': api_key,
+		'X-RapidAPI-Host': api_host
 	}
 };
 
-fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
+fetch(api_link, options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
