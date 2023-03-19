@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.joke-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightsteelblue;
+}
+
+.stacked-cards {
+  /* Used to position the stacked cards */
+  position: relative;
+
+  border: 3px solid #d1d5db;
+  border-radius: 0.25rem;
+  width: 400px;
+  height: 400px;
+}
+
+.stacked-cards__card {
+  /* Take full size */
+  height: 100%;
+  width: 100%;
+
+  /* Displayed under the container */
+  z-index: 1;
+
+  /* Background and border colors */
+  background-color: white;
+  border: 1px solid #d1d5db;
+
+  /* Rotate it. Change the number of degrees for the following cards */
+  transform: rotate(5deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.joke-title {
+  margin-right: 3rem;
+  font-size: 1.2rem;
+}
+
+.joke-title,
+.joke-card,
+.joke-btn {
+  transform: rotate(-5deg);
+}
+
+.joke-card {
+  width: 75%;
+  height: 30%;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.comma {
+  font-size: 2rem;
+  color: lightcoral;
+}
+
+.joke-btn {
+  padding: 1rem 2rem;
+  background-color: lightsalmon;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
